@@ -14,12 +14,12 @@ export default class SignUp extends Component {
       displayName: "",
       email: "",
       password: "",
-      confirmPassword: ""
+      confirmPassword: "",
     };
   }
 
-  handleSubmit = async event => {
-    event.preventDefault();
+  handleSubmit = async (e) => {
+    e.preventDefault();
     const { displayName, email, password, confirmPassword } = this.state;
 
     if (password !== confirmPassword) {
@@ -38,15 +38,15 @@ export default class SignUp extends Component {
         displayName: "",
         email: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
       };
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
+  handleChange = (e) => {
+    const { name, value } = e.target;
     this.setState({ [name]: value });
   };
 
@@ -54,7 +54,7 @@ export default class SignUp extends Component {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
       <div className="sign-up">
-        <h2>I do not have an account</h2>
+        <h2 className="title">I do not have an account</h2>
         <span>Sign up with your email and password</span>
 
         <form className="sign-up-form" onSubmit={this.handleSubmit}>

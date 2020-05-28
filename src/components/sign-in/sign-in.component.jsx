@@ -12,23 +12,23 @@ export default class SignIn extends Component {
 
     this.state = {
       email: "",
-      password: ""
+      password: "",
     };
   }
 
-  handleSubmit = async event => {
-    event.preventDefault();
+  handleSubmit = async (e) => {
+    e.preventDefault();
     const { email, password } = this.state;
     try {
       await auth.signInWithEmailAndPassword(email, password);
       this.setState({ email: "", password: "" });
     } catch (error) {
-      console.log("error");
+      console.error("error");
     }
   };
 
-  handleChange = event => {
-    const { name, value } = event.target;
+  handleChange = (e) => {
+    const { name, value } = e.target;
     this.setState({ [name]: value });
   };
 
