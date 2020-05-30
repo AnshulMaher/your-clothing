@@ -12,13 +12,14 @@ import "./header.styles.scss";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
-import { ReactComponent as Logo } from "../../assets/crown.svg";
+// import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 const Header = ({ currentUser, hidden }) => {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
-        <Logo className="logo" />
+        {/* <Logo className="logo" /> */}
+        Logo
       </Link>
       <div className="options">
         <Link className="option" to="/shop">
