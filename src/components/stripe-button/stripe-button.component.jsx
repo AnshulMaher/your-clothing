@@ -5,14 +5,14 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = "pk_test_eJJok9TqXO8FQLKUb5pAqSqf00r52YsWuK";
 
-  const onToken = token => {
+  const onToken = (token) => {
     console.log(token);
     alert("Payment successful");
   };
 
   return (
     <StripeCheckout
-      label="PAY Now"
+      label="Pay Now"
       name="Your Clothing Ltd."
       billingAddress
       shippingAddress
