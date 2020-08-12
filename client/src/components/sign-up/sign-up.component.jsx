@@ -13,7 +13,7 @@ const SignUp = ({ signUpStart }) => {
     displayName: "",
     email: "",
     password: "",
-    confirmPassword: "",
+    confirmPassword: ""
   });
 
   const { displayName, email, password, confirmPassword } = userCredentials;
@@ -79,7 +79,7 @@ const SignUp = ({ signUpStart }) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials)),
+  signUpStart: (userCredentials) => dispatch(signUpStart(userCredentials))
 });
 
 export default connect(null, mapDispatchToProps)(SignUp);

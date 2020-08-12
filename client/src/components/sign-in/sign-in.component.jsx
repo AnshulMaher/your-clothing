@@ -6,19 +6,19 @@ import CustomButton from "../custom-button/custom-button.component";
 
 import {
   googleSignInStart,
-  emailSignInStart,
+  emailSignInStart
 } from "../../redux/user/user.actions";
 
 import {
   SignInContainer,
   SignInTitle,
-  ButtonsBarContainer,
+  ButtonsBarContainer
 } from "./sign-in.styles";
 
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   const [userCredentials, setCredentials] = useState({
     email: "",
-    password: "",
+    password: ""
   });
 
   const { email, password } = userCredentials;
@@ -75,7 +75,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
 const mapDispachToProps = (dispatch) => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
   emailSignInStart: (email, password) =>
-    dispatch(emailSignInStart({ email, password })),
+    dispatch(emailSignInStart({ email, password }))
 });
 
 export default connect(null, mapDispachToProps)(SignIn);

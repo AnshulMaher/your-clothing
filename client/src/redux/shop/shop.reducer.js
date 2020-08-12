@@ -3,7 +3,7 @@ import ShopActionTypes from "./shop.types";
 const initialState = {
   collections: null,
   isFetching: false,
-  errorMessage: undefined,
+  errorMessage: undefined
 };
 
 export default (state = initialState, { type, payload }) => {

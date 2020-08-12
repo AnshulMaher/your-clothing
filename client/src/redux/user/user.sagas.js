@@ -4,7 +4,7 @@ import {
   auth,
   googleProvider,
   createUserProfileDocument,
-  getCurrentUser,
+  getCurrentUser
 } from "../../firebase/firebase.utils";
 
 import UserActionTypes from "./user.types";
@@ -14,7 +14,7 @@ import {
   signOutSuccess,
   signOutFailure,
   signUpSuccess,
-  signUpFailure,
+  signUpFailure
 } from "./user.actions";
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
@@ -111,6 +111,6 @@ export function* userSagas() {
     call(onGoogleSignInStart),
     call(onEmailSignInStart),
     call(onCheckUserSession),
-    call(onSignOutStart),
+    call(onSignOutStart)
   ]);
 }

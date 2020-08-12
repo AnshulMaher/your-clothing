@@ -10,7 +10,7 @@ const config = {
   storageBucket: "your-clothing.appspot.com",
   messagingSenderId: "537394926303",
   appId: "1:537394926303:web:f60d91ebde0077b8a60f6a",
-  measurementId: "G-9R396L0NJF",
+  measurementId: "G-9R396L0NJF"
 };
 
 firebase.initializeApp(config);
@@ -31,7 +31,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData,
+        ...additionalData
       });
     } catch (error) {
       console.log("error creating user", error.message);
@@ -62,7 +62,7 @@ export const convertCollectionsSnapshotToMap = (collections) => {
       id: doc.id,
       title,
       routeName: encodeURI(title.toLowerCase()),
-      items,
+      items
     };
   });
 

@@ -2,7 +2,7 @@ import UserActionTypes from "./user.types";
 
 const initialState = {
   currentUser: null,
-  error: null,
+  error: null
 };
 
 export default (state = initialState, { type, payload }) => {

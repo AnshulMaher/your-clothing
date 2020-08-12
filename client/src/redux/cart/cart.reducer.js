@@ -3,7 +3,7 @@ import { addItemToCart, removeItemFromCart } from "./cart.utils";
 
 const initialState = {
   hidden: true,
-  cartItems: [],
+  cartItems: []
 };
 
 export default (state = initialState, { type, payload }) => {
@@ -17,7 +17,7 @@ export default (state = initialState, { type, payload }) => {
     case CartActionTypes.REMOVE_ITEM:
       return {
         ...state,
-        cartItems: removeItemFromCart(state.cartItems, payload),
+        cartItems: removeItemFromCart(state.cartItems, payload)
       };
 
     case CartActionTypes.CLEAR_ITEM_FROM_CART:
@@ -25,7 +25,7 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         cartItems: state.cartItems.filter(
           (cartItem) => cartItem.id !== payload.id
-        ),
+        )
       };
 
     case CartActionTypes.CLEAR_CART:

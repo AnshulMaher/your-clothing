@@ -3,6 +3,7 @@ import { all, call, takeLatest, put } from "redux-saga/effects";
 import UserActionTypes from "../user/user.types";
 
 const { clearCart } = require("./cart.actions");
+
 export function* clearCartOnSignOut() {
   yield put(clearCart());
 }
